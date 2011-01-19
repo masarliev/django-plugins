@@ -1,0 +1,28 @@
+<script type="text/javascript" src="{{MEDIA_URL}}piecemaker/scripts/swfobject/swfobject.js"></script>
+<style>
+  #piecemaker{
+    margin-left: -50px;
+  }
+</style>
+<script type="text/javascript">
+  var flashvars = {};
+  flashvars.cssSource = "{{MEDIA_URL}}piecemaker/piecemaker.css";
+  flashvars.xmlSource = "{% url piecemaker_xml object_id=object.pk %}";
+
+  var params = {};
+  params.play = "true";
+  params.menu = "false";
+  params.scale = "showall";
+  params.wmode = "transparent";
+  params.allowfullscreen = "true";
+  params.allowscriptaccess = "always";
+  params.allownetworking = "all";
+
+  swfobject.embedSWF('{{MEDIA_URL}}piecemaker/piecemaker.swf', 'piecemaker', '1000', '400', '10', null, flashvars,    
+  params, null);
+
+</script>
+<div id="piecemaker">
+  <p>Please install flash player.</p>
+</div>
+   
