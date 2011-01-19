@@ -1,0 +1,15 @@
+1. Piecemaker
+   The Piecemaker is an open source Flash ActionScript 3 image rotator.
+   This plugin rotates entry images from zinnia blog
+   1.1 Requirements
+      django-cms
+      sorl-thumbnail
+      django-blog-zinnia
+   1.2 Installation
+      1.2.1 Add stalwart.piecemaker to your INSTALLED_APPS
+      1.2.2 Run python manage.py syncdb
+      1.2.3 Copy or link stalwart/piecemaker/media/ to you media directory
+      1.2.4 Add this to your application urls
+       url(r'^piecemaker_(?P<object_id>\d+).xml', 
+            'stalwart.piecemaker.views.render_xml', name="piecemaker_xml"),
+
