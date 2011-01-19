@@ -11,8 +11,6 @@ from tagging.models import TaggedItem
 from stalwart.piecemaker.models import PiecemakerLatestEntriesPlugin
 def render_xml(request, object_id):
     template_vars = {}
-    #template_vars['slides'] = Slide.objects.all()
-    #template_vars['transitions'] = Transition.objects.all()
     t = loader.get_template('piecemaker/cms/content.xml')
     c = Context(template_vars)
     entries = Entry.published.all()
