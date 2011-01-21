@@ -3,9 +3,9 @@ Created on Jan 21, 2011
 
 @author: masarliev
 '''
-from stalwart.livehistory.decorator import asynchronous
+from stalwart.livelog.decorator import asynchronous
 from django.contrib.auth.decorators import login_required
-from stalwart.livehistory.listener import listener
+from stalwart.livelog.listener import listener
 @login_required
 @asynchronous
 def history_lp(request, handler):

@@ -5,7 +5,7 @@ Created on Jan 21, 2011
 '''
 from django.contrib import admin
 from django.contrib.admin.models import LogEntry
-from stalwart.livehistory.views import history_lp
+from stalwart.livelog.views import history_lp
 class LogAdmin(admin.ModelAdmin):
     list_display    = ('user', 'content_type','object_repr')
     def get_urls(self):
