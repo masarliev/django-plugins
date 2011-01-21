@@ -1,0 +1,51 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+{% block extrastyle%}{{block.super}}
+<link rel="stylesheet" href="{{MEDIA_URL}}livehistory/style/jquery.jgrowl.css" type="text/css"/>
+<link rel="stylesheet" href="{{MEDIA_URL}}livehistory/style/jgrowl-theme.css" type="text/css"/>
+{% endblock %}
+{% block extrahead %}{{block.super}}
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="{{MEDIA_URL}}livelog/js/jquery.jgrowl_compressed.js"></script>
+<script type="text/javascript" src="{{MEDIA_URL}}livelog/js/jgrowl-theme.js"></script>
+<script type="text/javascript">
+var epollerrors = 0;
+var longPollRecv = function(){
+  $.ajax({ cache: false ,type: "GET", url: "{% url admin:admin_lp_history %}",dataType: "json"
+           ,error: function (XMLHttpRequest, textStatus, errorThrown) {
+             epollerrors++
+             if(epollerrors == 10){
+               
+             }else{
+               setTimeout(longPollRecv, 200)
+             }
+           }
+           ,success: function (message) {
+            if (message.msg != null){
+                jGrowlTheme(message.msg.head, message.msg.body);
+                setTimeout(longPollRecv, 200)
+              }
+              if(message == false){
+                 setTimeout(longPollRecv, 200)
+              }
+               
+             }
+           });
+}
+
+$(window).load(function(){
+  setTimeout(function(){
+  longPollRecv.call()
+  }, 20)
+})
+
+
+</script>
+{% endblock %}
+{% block title %}{{ title }} | {% trans 'Django site admin 1' %}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans 'Django administration 1' %}</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

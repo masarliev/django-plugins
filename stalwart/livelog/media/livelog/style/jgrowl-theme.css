@@ -1,0 +1,117 @@
+div.jGrowl div.themed {
+	font-family: 				Arial, "Helvetica", "Helvetica Neue";
+	font-size: 					11px;
+	background: 				url('../images/themes.png') no-repeat;
+	-moz-border-radius: 		0px;
+	-webkit-border-radius:	0px;
+	opacity: 					.95;
+	filter: 						alpha(opacity = 95);
+	width: 						308px;
+	height: 						76px;
+	padding: 					0px;
+	overflow: 					hidden;
+	border-color: 				#5ab500;
+	color: 						#fff;
+	position: 					relative;
+}
+
+div.jGrowl div.themed div.message {
+	padding-top:	0px;
+	padding-bottom:7px;
+	padding-left:	15px;
+	padding-right:	15px;
+	text-shadow: -1px -1px #000;
+	line-height:	1.2em;
+	margin-left:	7em;
+}
+			
+div.jGrowl div.themed div.header {
+	padding: 		12px 7px 7px 7px;
+	padding-left: 	15px;
+	padding-right: 15px;
+	font-size: 		14px;
+	text-shadow: 	-1px -1px #000;
+	letter-spacing:0px;
+	margin-left: 	6em;
+}
+				
+img.img-thumb {
+	position: 	absolute;
+	display: 	block;
+	top: 			1.2em;
+	left: 		2em;
+	width: 		45px;
+}
+				
+.separator {
+	position: 		absolute;
+	background: 	url('../images/separator.png') top right;
+	display: 		block;
+	height: 			63px;
+	width: 			1px;
+	top: 				.7em;
+	left: 			6.7em;
+}
+			
+div.jGrowl div.themed2 {
+	font-family: 				Arial, "Helvetica", "Helvetica Neue";
+	font-size: 					11px;
+	background: 				url('../images/themed.png') no-repeat;
+	-moz-border-radius: 		0px;
+	-webkit-border-radius:	0px;
+	opacity: 					.95;
+	filter: 						alpha(opacity = 95);
+	width: 						308px;
+	height: 						99px;
+	padding:	 					0px;
+	overflow: 					hidden;
+	border-color: 				#5ab500;
+	color: 						#fff;
+	position: 					relative;
+	overflow: 					hidden;
+}
+
+div.jGrowl div.themed2 div.message {
+	padding-top: 		0px;
+	padding-bottom: 	7px;
+	padding-left: 		15px;
+	padding-right: 	15px;
+	text-shadow: 		-1px -1px #000;
+	line-height: 		1.2em;
+	margin-left: 		6.5em;
+	z-index: 			10;
+}
+			
+div.jGrowl div.themed2 div.header {
+	padding: 			12px 7px 7px 7px;
+	padding-left: 		15px;
+	padding-right: 	15px;
+	font-size: 			14px;
+	text-shadow: 		-1px -1px #000;
+	letter-spacing: 	0px;
+	margin-left: 		5em;
+	z-index: 			9;
+}
+				
+img.img-thumb-themed2 {
+	position:	absolute;
+	display: 	block;
+	top: 			.1em;
+	right: 		-10em;
+	width: 		110px;
+	opacity: 	.75;
+	filter: 		alpha(opacity = 75);
+	z-index: 	-999;
+	overflow: 	hidden;
+}
+
+div.jGrowl div.themed div.close , div.jGrowl div.themed2 div.close {
+	display: none;
+}
+div.jGrowl div.ui-state-highlight{
+  border: none;
+}
+
+div.jGrowl a {
+  color: #ABC6DD;
+}
