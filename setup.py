@@ -9,7 +9,7 @@ setup(
 	author='Mitko Masarliev',
 	author_email='mitko@masalriev.net',
 	url='http://masarliev.net/',
-	packages=['stalwart', 'stalwart.piecemaker', 'stalwart.livelog', 'stalwart.livelog.management.commands'],
+	packages=['stalwart', 'stalwart.piecemaker', 'stalwart.livelog', 'stalwart.livelog.management','stalwart.livelog.management.commands'],
 	package_data={
 		'stalwart': [
 			'livelog/media/livelog/images/*.png',
