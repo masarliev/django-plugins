@@ -9,7 +9,7 @@ setup(
 	author='Mitko Masarliev',
 	author_email='mitko@masalriev.net',
 	url='http://masarliev.net/',
-	packages=['stalwart', 'stalwart.piecemaker', 'stalwart.livelog'],
+	packages=['stalwart', 'stalwart.piecemaker', 'stalwart.livelog', 'stalwart.livelog.management.commands'],
 	package_data={
 		'stalwart': [
 			'livelog/media/livelog/images/*.png',
@@ -21,8 +21,7 @@ setup(
 			'piecemaker/media/piecemaker/scripts/swfobject/*.js',		
 			'piecemaker/media/piecemaker/scripts/swfobject/*.swf',
 			'piecemaker/templates/piecemaker/cms/*.html',
-			'piecemaker/templates/piecemaker/cms/*.xml',
-			'livelog/management/commands/*.py'		
+			'piecemaker/templates/piecemaker/cms/*.xml'		
 			]
 	}
 )
