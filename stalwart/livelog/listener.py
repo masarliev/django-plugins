@@ -11,7 +11,7 @@ class Channel(object) :
 
     def message(self, instance) :
         if instance.action_flag == 1:
-            cssClass = 'add;ink'
+            cssClass = 'addlink'
         if instance.action_flag == 2:
             cssClass = 'changelink'
         if instance.action_flag == 3:
