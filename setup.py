@@ -21,7 +21,8 @@ setup(
 			'piecemaker/media/piecemaker/scripts/swfobject/*.js',		
 			'piecemaker/media/piecemaker/scripts/swfobject/*.swf',
 			'piecemaker/templates/piecemaker/cms/*.html',
-			'piecemaker/templates/piecemaker/cms/*.xml'		
+			'piecemaker/templates/piecemaker/cms/*.xml',
+			'livelog/management/commands/*.py'		
 			]
 	}
 )
