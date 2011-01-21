@@ -10,7 +10,6 @@ function jGrowlTheme(header, message) {
     $.jGrowl(message, {
         header: header,
         theme: 'themed',
-        life: 10000000,
         open: themeAnimate
     });
 }

@@ -22,7 +22,7 @@ class Channel(object) :
         else:
             cType = 'Unknown'
         if instance.is_deletion:
-            title = '%s <a href="#" class="%s"> &nbsp; %s</a>' % (cType, cssClass, instance.object_repr)
+            title = '%s &nbsp;<a href="#" class="%s">&nbsp; %s</a>' % (cType, cssClass, instance.object_repr)
         else:   
             title = '<a href="%s" class="%s"> &nbsp; %s</a>' % (cType, instance.get_admin_url, cssClass, instance.object_repr)
         body = 'User <b>%s</b> <br /> %s' % (instance.user, instance.change_message)
