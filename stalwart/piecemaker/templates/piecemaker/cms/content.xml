@@ -5,7 +5,7 @@
     {% for content in entries %}
     {% thumbnail content.image "900x300" crop="center" as im %}
     <Image Source="{{ im.url }}" Title="{{content.title}}">
-      <Text><h1>{{content.title}}</h1><p>{{content.excerpt}}</p></Text>
+      <Text><h1>{{content.title}}</h1><p>{{content.excerpt|safe}}</p></Text>
       <Hyperlink URL="{{content.get_absolute_url}}" Target="_self" />
     </Image>
     {% endthumbnail %}
